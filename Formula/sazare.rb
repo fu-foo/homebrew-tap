@@ -9,28 +9,28 @@
 class Sazare < Formula
   desc "Single-binary FHIR R4 server — the easiest way to run FHIR locally"
   homepage "https://github.com/fu-foo/fhir-sazare"
-  version "0.6.5"
+  version "0.6.6"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.5/sazare-server-macos-arm64.tar.gz"
-      sha256 "3f3cd72297c6db6f428f6200bfd1bed9c92d5374699545ac92de74c1387a327f"
+      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.6/sazare-server-macos-arm64.tar.gz"
+      sha256 "b4077e57abf5b958ab97451c7b1057512c324b1e51a078dc215e191522179437"
     end
     on_intel do
-      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.5/sazare-server-macos-amd64.tar.gz"
-      sha256 "1ae112f6c5de09ee4a3328f58449920037590fa5eb20974923cfc339d9b3052c"
+      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.6/sazare-server-macos-amd64.tar.gz"
+      sha256 "6bdef36ecc800911a53beeea084cd0e3739aab60e8e9bcadc386a82ccb91379b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.5/sazare-server-linux-arm64.tar.gz"
-      sha256 "b1de41b5eef2412dac4662a0ecd7f9624fdf3fd4f34eec3aa730bd7e87b51d6b"
+      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.6/sazare-server-linux-arm64.tar.gz"
+      sha256 "55f7182856d3ae05cb3de34c613a43afea6c6b649429f70fa1433d63eea08242"
     end
     on_intel do
-      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.5/sazare-server-linux-amd64.tar.gz"
-      sha256 "8c8cb502408ec38df7cd9f1c8bbb415d1e52bad373488149869e2c286b569cbd"
+      url "https://github.com/fu-foo/fhir-sazare/releases/download/v0.6.6/sazare-server-linux-amd64.tar.gz"
+      sha256 "f68282ccef7a45d886a004f68f96cd843b30cc6e9134f513333c660ca046c914"
     end
   end
 
