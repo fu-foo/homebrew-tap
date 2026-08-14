@@ -1,12 +1,14 @@
 # fu-foo/homebrew-tap
 
-Homebrew tap for [fhir-sazare](https://github.com/fu-foo/fhir-sazare) — a
-single-binary FHIR R4 server, the easiest way to run FHIR locally.
-
 ```sh
-brew install fu-foo/tap/sazare
-sazare-server --demo --open
+brew install fu-foo/tap/sazare     # single-binary FHIR R4 server
+brew install fu-foo/tap/fugantt    # Gantt chart: plan against actual
 ```
+
+[fhir-sazare](https://github.com/fu-foo/fhir-sazare) — the easiest way to run
+FHIR locally.
+[fugantt](https://github.com/fu-foo/fugantt) — plan against actual, counted in
+working days.
 
 Installing through Homebrew also avoids the macOS Gatekeeper "unidentified
 developer" warning you get from a raw browser download: brew-installed binaries
