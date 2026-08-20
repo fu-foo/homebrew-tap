@@ -5,24 +5,24 @@
 class Fugantt < Formula
   desc "Gantt chart with plan against actual, counted in working days"
   homepage "https://github.com/fu-foo/fugantt"
-  version "0.5.4"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/fu-foo/fugantt/releases/download/v0.5.4/fugantt-macos-arm64.tar.gz"
-      sha256 "bdd9e0084e34318ef18376e38f1abed89001ad084b3bac85b2ef2afc66a7d46d"
+      url "https://github.com/fu-foo/fugantt/releases/download/v0.6.0/fugantt-macos-arm64.tar.gz"
+      sha256 "7dea52bfe685bc0090603d6b4bd2e15be89ca9e5caef00b5a2ef90ae2f9704d5"
     end
     on_intel do
-      url "https://github.com/fu-foo/fugantt/releases/download/v0.5.4/fugantt-macos-x86_64.tar.gz"
-      sha256 "47203367fb44744513e163c77ef1da64a37e4d155b63e261134c838d2ea28720"
+      url "https://github.com/fu-foo/fugantt/releases/download/v0.6.0/fugantt-macos-x86_64.tar.gz"
+      sha256 "e66b5b9a6740133549c8850048368a6e39a1fbd67df7f993b29d0073dc0fb0db"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/fu-foo/fugantt/releases/download/v0.5.4/fugantt-linux-x86_64.tar.gz"
-      sha256 "39efc7b09036e460a7d92d76ad0a76472f4b36aa5b4e9b2efbff65dce0a986f8"
+      url "https://github.com/fu-foo/fugantt/releases/download/v0.6.0/fugantt-linux-x86_64.tar.gz"
+      sha256 "cca0027ea02f99214c77d045a40d7c54b53e18395bad5c2af34554ee1f0cbf6e"
     end
   end
 
