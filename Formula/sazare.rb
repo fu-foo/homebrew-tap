@@ -38,15 +38,32 @@ class Sazare < Formula
     bin.install "sazare-server"
   end
 
+  # `brew services start sazare`: runs the server in the foreground under
+  # launchd / systemd. Without a configuration file it uses the user's data
+  # directory; ~/.config/sazare/config.yaml (or the platform equivalent) is
+  # picked up when present.
+  service do
+    run [opt_bin/"sazare-server", "run"]
+    keep_alive true
+    working_dir var/"sazare"
+    log_path var/"log/sazare.log"
+    error_log_path var/"log/sazare.log"
+  end
+
+  def post_install
+    (var/"sazare").mkpath
+  end
+
   test do
+    assert_match version.to_s, shell_output("#{bin}/sazare-server version")
     port = free_port
     pid = fork do
       ENV["SAZARE_PORT"] = port.to_s
       ENV["SAZARE_DATA_DIR"] = testpath/"data"
-      exec bin/"sazare-server"
+      exec bin/"sazare-server", "run"
     end
     sleep 5
-    assert_match(/ok|UP|healthy|"status"/i, shell_output("curl -fsS http://127.0.0.1:#{port}/health"))
+    assert_match(/"status":"ok"/, shell_output("curl -fsS http://127.0.0.1:#{port}/health"))
   ensure
     Process.kill("TERM", pid) if pid
   end
