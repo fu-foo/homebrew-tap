@@ -42,10 +42,15 @@ class Sazare < Formula
   # launchd / systemd. Without a configuration file it uses the user's data
   # directory; ~/.config/sazare/config.yaml (or the platform equivalent) is
   # picked up when present.
+  #
+  # The server writes var/log/sazare.log itself and turns it over at 50 MB
+  # (sazare.log.1 keeps the one before; SAZARE_LOG_FILE, from 0.17 — older
+  # versions log to stdout, which goes to the same file).
   service do
     run [opt_bin/"sazare-server", "run"]
     keep_alive true
     working_dir var/"sazare"
+    environment_variables SAZARE_LOG_FILE: (var/"log/sazare.log").to_s
     log_path var/"log/sazare.log"
     error_log_path var/"log/sazare.log"
   end
